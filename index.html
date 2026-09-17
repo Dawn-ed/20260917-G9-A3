@@ -12,7 +12,13 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body class="multiple-scenes view-control-buttons">
+<!-- 背景音樂標籤 (loop 為循環播放) -->
+<audio id="bgm" src="QQ.wav" loop preload="auto"></audio>
 
+<!-- 浮動音樂開關按鈕 -->
+<button id="music-btn" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999; padding: 10px 15px; border-radius: 20px; border: none; background: rgba(0,0,0,0.7); color: white; cursor: pointer;">
+  🎵 播放音樂
+</button>
 <div id="pano"></div>
 
 <div id="sceneList">
@@ -97,6 +103,33 @@
 
 <script src="data.js"></script>
 <script src="index.js"></script>
+<script>
+  const bgm = document.getElementById('bgm');
+  const musicBtn = document.getElementById('music-btn');
 
+  // 按鈕點擊切換播放/暫停
+  musicBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // 防止觸發全域點擊事件
+    if (bgm.paused) {
+      bgm.play();
+      musicBtn.innerText = '🔊 暫停音樂';
+    } else {
+      bgm.pause();
+      musicBtn.innerText = '🎵 播放音樂';
+    }
+  });
+
+  // 使用者首次點擊網頁任意處時嘗試播放
+  const startPlayOnFirstClick = () => {
+    bgm.play().then(() => {
+      musicBtn.innerText = '🔊 暫停音樂';
+      document.removeEventListener('click', startPlayOnFirstClick);
+    }).catch(err => {
+      console.log('瀏覽器阻擋自動播放，等待按鈕觸發：', err);
+    });
+  };
+
+  document.addEventListener('click', startPlayOnFirstClick, { once: true });
+</script>
 </body>
 </html>
