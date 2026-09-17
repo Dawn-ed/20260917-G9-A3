@@ -111,30 +111,46 @@
   const bgm = document.getElementById('bgm');
   const musicBtn = document.getElementById('music-btn');
 
-  // 按鈕點擊切換播放/暫停
+  // 設定音量為 60%
+  bgm.volume = 0.6;
+
+  // 嘗試播放音樂函式
+  const playBgm = () => {
+    bgm.play().then(() => {
+      musicBtn.innerText = '🔊 暫停音樂';
+      // 成功播放後，移除監聽避免重複觸發
+      document.removeEventListener('click', userInteractionHandler);
+      document.removeEventListener('touchstart', userInteractionHandler);
+    }).catch(err => {
+      // 若被瀏覽器阻擋自動播放，維持顯示「播放音樂」等待使用者點擊
+      musicBtn.innerText = '🎵 播放音樂';
+    });
+  };
+
+  // 1. 頁面載入時嘗試立即自動播放
+  window.addEventListener('DOMContentLoaded', () => {
+    playBgm();
+  });
+
+  // 2. 瀏覽器若阻擋，使用者點擊/觸控畫面任何地方時立即啟動
+  const userInteractionHandler = () => {
+    playBgm();
+  };
+  document.addEventListener('click', userInteractionHandler);
+  document.addEventListener('touchstart', userInteractionHandler);
+
+  // 3. 按鈕點擊手動切換開關
   musicBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
+    e.stopPropagation(); // 阻止事件冒泡
     if (bgm.paused) {
       bgm.play().then(() => {
         musicBtn.innerText = '🔊 暫停音樂';
-      }).catch(err => console.log('播放被阻擋：', err));
+      });
     } else {
       bgm.pause();
       musicBtn.innerText = '🎵 播放音樂';
     }
   });
-
-  // 使用者首次點擊網頁任意處自動嘗試播放
-  const startPlayOnFirstClick = () => {
-    bgm.play().then(() => {
-      musicBtn.innerText = '🔊 暫停音樂';
-      document.removeEventListener('click', startPlayOnFirstClick);
-    }).catch(err => {
-      console.log('等待使用者手動點擊播放按鈕');
-    });
-  };
-
-  document.addEventListener('click', startPlayOnFirstClick, { once: true });
 </script>
 
 </body>
