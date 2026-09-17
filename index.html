@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="vendor/reset.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
-<body class="multiple-scenes view-control-buttons">
+<body class="multiple-scenes ">
 
 <div id="pano"></div>
 
@@ -19,35 +19,39 @@
   <ul class="scenes">
     
       <a href="javascript:void(0)" class="scene" data-id="0-">
-        <li class="text">玄關</li>
+        <li class="text">關燈</li>
       </a>
     
       <a href="javascript:void(0)" class="scene" data-id="1-">
-        <li class="text">客廳</li>
+        <li class="text">開燈</li>
       </a>
     
       <a href="javascript:void(0)" class="scene" data-id="2-">
         <li class="text">餐廳</li>
       </a>
     
-      <a href="javascript:void(0)" class="scene" data-id="3-">
-        <li class="text">過道</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="4-1">
+      <a href="javascript:void(0)" class="scene" data-id="3-1">
         <li class="text">次臥房1</li>
       </a>
     
-      <a href="javascript:void(0)" class="scene" data-id="5-2">
+      <a href="javascript:void(0)" class="scene" data-id="4-2">
         <li class="text">次臥房2</li>
       </a>
     
-      <a href="javascript:void(0)" class="scene" data-id="6-">
+      <a href="javascript:void(0)" class="scene" data-id="5-">
         <li class="text">主臥房</li>
       </a>
     
-      <a href="javascript:void(0)" class="scene" data-id="7--">
+      <a href="javascript:void(0)" class="scene" data-id="6--">
         <li class="text">主臥房-衣櫃</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="7-">
+        <li class="text">客廳</li>
+      </a>
+    
+      <a href="javascript:void(0)" class="scene" data-id="8-">
+        <li class="text">過道</li>
       </a>
     
   </ul>
@@ -91,13 +95,12 @@
   <img class="icon" src="img/minus.png">
 </a>
 
-<script src="vendor/screenfull.min.js"></script>
-<script src="vendor/bowser.min.js"></script>
-<script src="vendor/marzipano.js"></script>
+<script src="vendor/screenfull.min.js" ></script>
+<script src="vendor/bowser.min.js" ></script>
+<script src="vendor/marzipano.js" ></script>
 
 <script src="data.js"></script>
 <script src="index.js"></script>
-
 <!-- 背景音樂標籤 -->
 <audio id="bgm" src="QQ.mp3" loop preload="auto"></audio>
 
@@ -152,6 +155,7 @@
     }
   });
 </script>
+
 
 </body>
 </html>

@@ -2,7 +2,7 @@ var APP_DATA = {
   "scenes": [
     {
       "id": "0-",
-      "name": "玄關",
+      "name": "關燈",
       "levels": [
         {
           "tileSize": 256,
@@ -28,35 +28,23 @@ var APP_DATA = {
       ],
       "faceSize": 4096,
       "initialViewParameters": {
-        "pitch": 0,
-        "yaw": 0,
-        "fov": 1.5707963267948966
+        "yaw": 1.4410072893585024,
+        "pitch": -0.0016294606516140675,
+        "fov": 1.3365071038314758
       },
       "linkHotspots": [
         {
-          "yaw": 0.7380000593036282,
-          "pitch": 0.33093741048862135,
+          "yaw": 1.9374442523686985,
+          "pitch": 0.46328886682815806,
           "rotation": 0,
           "target": "1-"
-        },
-        {
-          "yaw": 1.0788786305901752,
-          "pitch": 0.13410586399323776,
-          "rotation": 0,
-          "target": "3-"
-        },
-        {
-          "yaw": 1.419974273276452,
-          "pitch": 0.0971817947842144,
-          "rotation": 0,
-          "target": "2-"
         }
       ],
       "infoHotspots": []
     },
     {
       "id": "1-",
-      "name": "客廳",
+      "name": "開燈",
       "levels": [
         {
           "tileSize": 256,
@@ -82,28 +70,34 @@ var APP_DATA = {
       ],
       "faceSize": 4096,
       "initialViewParameters": {
-        "pitch": 0,
-        "yaw": 0,
-        "fov": 1.5707963267948966
+        "yaw": 1.432321715435645,
+        "pitch": 0.0018797568267672204,
+        "fov": 1.3365071038314758
       },
       "linkHotspots": [
         {
-          "yaw": 2.027924976567073,
-          "pitch": 0.29341501671888537,
+          "yaw": 1.933034568418126,
+          "pitch": 0.46857766063478223,
           "rotation": 0,
           "target": "0-"
         },
         {
-          "yaw": 0.37661922883191323,
-          "pitch": 0.1280180710990635,
+          "yaw": 1.403881163409812,
+          "pitch": 0.07767019782663631,
           "rotation": 0,
           "target": "2-"
         },
         {
-          "yaw": -0.10732972319183354,
-          "pitch": 0.1799427670240732,
+          "yaw": 1.0608507692233253,
+          "pitch": 0.13369433313357248,
           "rotation": 0,
-          "target": "3-"
+          "target": "8-"
+        },
+        {
+          "yaw": 0.7273674515891564,
+          "pitch": 0.34934788171713826,
+          "rotation": 0,
+          "target": "7-"
         }
       ],
       "infoHotspots": []
@@ -145,91 +139,19 @@ var APP_DATA = {
           "yaw": -1.3868377833068113,
           "pitch": 0.18245920429341922,
           "rotation": 0,
-          "target": "1-"
+          "target": "7-"
         },
         {
           "yaw": -1.0903035427116272,
           "pitch": 0.17309760527645857,
           "rotation": 0,
-          "target": "3-"
+          "target": "8-"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "3-",
-      "name": "過道",
-      "levels": [
-        {
-          "tileSize": 256,
-          "size": 256,
-          "fallbackOnly": true
-        },
-        {
-          "tileSize": 512,
-          "size": 512
-        },
-        {
-          "tileSize": 512,
-          "size": 1024
-        },
-        {
-          "tileSize": 512,
-          "size": 2048
-        },
-        {
-          "tileSize": 512,
-          "size": 4096
-        }
-      ],
-      "faceSize": 4096,
-      "initialViewParameters": {
-        "yaw": -0.07586184341792368,
-        "pitch": -0.00071523570949239,
-        "fov": 0.9029398929339391
-      },
-      "linkHotspots": [
-        {
-          "yaw": -0.1862938336552844,
-          "pitch": 0.10642925238649958,
-          "rotation": 0,
-          "target": "6-"
-        },
-        {
-          "yaw": 0.18721828391025852,
-          "pitch": 0.0993590524197625,
-          "rotation": 0,
-          "target": "5-2"
-        },
-        {
-          "yaw": 0.2859273611146591,
-          "pitch": 0.15242999760719478,
-          "rotation": 0,
-          "target": "4-1"
-        },
-        {
-          "yaw": -1.2232710106401932,
-          "pitch": 0.2816570209231486,
-          "rotation": 0,
-          "target": "1-"
-        },
-        {
-          "yaw": -1.8455354892163172,
-          "pitch": 0.14456507575500588,
-          "rotation": 0,
-          "target": "0-"
-        },
-        {
-          "yaw": 2.1301227719307576,
-          "pitch": 0.44669491977949605,
-          "rotation": 0,
-          "target": "2-"
-        }
-      ],
-      "infoHotspots": []
-    },
-    {
-      "id": "4-1",
+      "id": "3-1",
       "name": "次臥房1",
       "levels": [
         {
@@ -265,13 +187,13 @@ var APP_DATA = {
           "yaw": 1.6142215093882992,
           "pitch": 0.2793217755147239,
           "rotation": 0,
-          "target": "3-"
+          "target": "8-"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "5-2",
+      "id": "4-2",
       "name": "次臥房2",
       "levels": [
         {
@@ -307,13 +229,13 @@ var APP_DATA = {
           "yaw": 1.991999768537167,
           "pitch": 0.307015826622985,
           "rotation": 0,
-          "target": "3-"
+          "target": "8-"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "6-",
+      "id": "5-",
       "name": "主臥房",
       "levels": [
         {
@@ -349,19 +271,19 @@ var APP_DATA = {
           "yaw": 1.3699802135872563,
           "pitch": 0.334392528334444,
           "rotation": 0,
-          "target": "3-"
+          "target": "8-"
         },
         {
           "yaw": -0.9057365745840471,
           "pitch": 0.18793305947343875,
           "rotation": 0,
-          "target": "7--"
+          "target": "6--"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "7--",
+      "id": "6--",
       "name": "主臥房-衣櫃",
       "levels": [
         {
@@ -397,7 +319,121 @@ var APP_DATA = {
           "yaw": 0.4844491914059432,
           "pitch": 0.16550094721333686,
           "rotation": 0,
-          "target": "6-"
+          "target": "5-"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "7-",
+      "name": "客廳",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        },
+        {
+          "tileSize": 512,
+          "size": 4096
+        }
+      ],
+      "faceSize": 4096,
+      "initialViewParameters": {
+        "pitch": 0,
+        "yaw": 0,
+        "fov": 1.5707963267948966
+      },
+      "linkHotspots": [
+        {
+          "yaw": -0.10399071371630342,
+          "pitch": 0.17059483509317275,
+          "rotation": 0,
+          "target": "8-"
+        },
+        {
+          "yaw": 0.3897880653728496,
+          "pitch": 0.15084216128692418,
+          "rotation": 0,
+          "target": "2-"
+        }
+      ],
+      "infoHotspots": []
+    },
+    {
+      "id": "8-",
+      "name": "過道",
+      "levels": [
+        {
+          "tileSize": 256,
+          "size": 256,
+          "fallbackOnly": true
+        },
+        {
+          "tileSize": 512,
+          "size": 512
+        },
+        {
+          "tileSize": 512,
+          "size": 1024
+        },
+        {
+          "tileSize": 512,
+          "size": 2048
+        },
+        {
+          "tileSize": 512,
+          "size": 4096
+        }
+      ],
+      "faceSize": 4096,
+      "initialViewParameters": {
+        "pitch": 0,
+        "yaw": 0,
+        "fov": 1.5707963267948966
+      },
+      "linkHotspots": [
+        {
+          "yaw": 0.2851300653106712,
+          "pitch": 0.133449806060856,
+          "rotation": 0,
+          "target": "3-1"
+        },
+        {
+          "yaw": 0.17365892625450563,
+          "pitch": 0.12187462232497026,
+          "rotation": 0,
+          "target": "4-2"
+        },
+        {
+          "yaw": -0.18011418348385888,
+          "pitch": 0.12173565107504558,
+          "rotation": 0,
+          "target": "5-"
+        },
+        {
+          "yaw": 2.0867044343513212,
+          "pitch": 0.4039040236467262,
+          "rotation": 0,
+          "target": "2-"
+        },
+        {
+          "yaw": -1.2155241485989343,
+          "pitch": 0.3440422143560511,
+          "rotation": 0,
+          "target": "7-"
         }
       ],
       "infoHotspots": []
@@ -408,6 +444,6 @@ var APP_DATA = {
     "mouseViewMode": "drag",
     "autorotateEnabled": true,
     "fullscreenButton": true,
-    "viewControlButtons": true
+    "viewControlButtons": false
   }
 };
